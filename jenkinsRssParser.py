@@ -17,7 +17,7 @@ f = open('mailTemplate.html', 'r')
 template = Template(f.read())
 f.close()
 
-html = template.render()
+html = template.render(name='asdg')
 
 part2 = MIMEText(html, 'html')
 
@@ -30,4 +30,3 @@ server.login(me, 'dlckdqo08907!@#$')
 
 server.send_message(msg)
 server.quit()
-
